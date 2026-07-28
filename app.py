@@ -683,7 +683,6 @@ def delete_appointment(appt_id):
     return redirect(url_for("appointments"))
 
 
-# ADD THE REPORTS ROUTE HERE
 @app.route("/reports")
 def reports():
     connection = get_db_connection()
