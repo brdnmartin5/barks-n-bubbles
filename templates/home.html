@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<h1 class="mb-3">Dashboard</h1>
+
+<p>Welcome to the Barks N' Bubbles Pet Grooming Appointment Management System.</p>
+
+<div class="row g-3 mt-3">
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5>Customers</h5>
+                <p>View and manage customer information.</p>
+                <a href="/customers" class="btn btn-primary">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5>Pets</h5>
+                <p>View and manage pet profiles.</p>
+                <a href="/pets" class="btn btn-primary">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5>Appointments</h5>
+                <p>Schedule and manage appointments.</p>
+                <a href="#" class="btn btn-primary">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5>Groomers</h5>
+                <p>Manage groomer information.</p>
+                <a href="/groomers" class="btn btn-primary">
+                    Open
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5>Services</h5>
+                <p>Manage grooming services.</p>
+                <a href="/services" class="btn btn-primary">
+                    Open
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5>Reports</h5>
+                <p>Generate appointment reports.</p>
+                <a href="/reports" class="btn btn-primary">Open</a>
+                    Open
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

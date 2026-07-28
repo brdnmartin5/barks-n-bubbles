@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Reports{% endblock %}
+
+{% block content %}
+
+<h1 class="mb-4">Reports</h1>
+
+<p class="mb-4">
+    Summary information generated from the database.
+</p>
+
+<div class="row mb-4">
+
+    <div class="col-md">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h5>Customers</h5>
+                <h2>{{ total_customers }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h5>Pets</h5>
+                <h2>{{ total_pets }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h5>Groomers</h5>
+                <h2>{{ total_groomers }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h5>Services</h5>
+                <h2>{{ total_services }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h5>Appointments</h5>
+                <h2>{{ total_appointments }}</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-body">
+
+        <h4 class="mb-3">Appointments by Status</h4>
+
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Number of Appointments</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for row in appointments_by_status %}
+
+                <tr>
+                    <td>{{ row["status"] }}</td>
+                    <td>{{ row["total"] }}</td>
+                </tr>
+
+                {% else %}
+
+                <tr>
+                    <td colspan="2">No appointment data available.</td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Groomer{% endblock %}
+
+{% block content %}
+
+<h1 class="mb-4">Edit Groomer</h1>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label class="form-label">First Name</label>
+        <input
+            type="text"
+            name="first_name"
+            class="form-control"
+            value="{{ groomer['groomerFName'] }}"
+            required
+        >
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Last Name</label>
+        <input
+            type="text"
+            name="last_name"
+            class="form-control"
+            value="{{ groomer['groomerLName'] }}"
+            required
+        >
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Cell</label>
+        <input
+            type="text"
+            name="cell"
+            class="form-control"
+            value="{{ groomer['groomerCell'] or '' }}"
+        >
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Specialty</label>
+        <input
+            type="text"
+            name="specialty"
+            class="form-control"
+            value="{{ groomer['groomerSpecialty'] or '' }}"
+        >
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Save Changes
+    </button>
+
+    <a href="/groomers" class="btn btn-secondary">
+        Cancel
+    </a>
+
+</form>
+
+{% endblock %}
