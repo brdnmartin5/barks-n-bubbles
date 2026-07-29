@@ -40,7 +40,7 @@ The routes also connect to the SQLite database to get, update, or delete informa
 
 ### templates
 
-The templates folder contains all of the HTML pages that uses actually see.
+The templates folder contains all of the HTML pages that users actually see.
 
 **base.html**
 
