@@ -89,3 +89,20 @@ We wanted to keep the project simple and focus on the business requirements inst
 ## Authors
 - Brandon Martin
 - Heesoo Kim
+
+## Running the Project
+
+1. Make sure Python and Flask are installed.
+2. Run:
+   ```bash
+   python app.py
+   ```
+3. Open your browser and go to:
+   ```
+   http://127.0.0.1:5000
+   ```
+
+## Repository
+
+The project source code is available in this GitHub repository:
+https://github.com/brdnmartin5/barks-n-bubbles
